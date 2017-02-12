@@ -11,7 +11,7 @@ app.get('/status', function(req, res){
     var current_hour = date.getHours();
 
     var status = "on";
-    if(current_hour <= 7 || current_hour >= 11){
+    if(current_hour <= 7 || current_hour >= 23){
         status = "off";
     }
     res.send(status);
